@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fitball Fierce Waitlist</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fitball Fierce: 6‑Week Core Challenge</h1>
+    <p>Join the Early‑Bird waitlist & be the first to access!</p>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/7F6fZykq4-Y" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <form id="waitlist-form">
+      <input type="text" name="name" placeholder="First Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <button type="submit">I Want In First!</button>
+    </form>
+    <div id="thank-you" class="hidden">🎉 Thank you! You're on the waitlist!</div>
+  </div>
+  <script>
+    const form = document.getElementById('waitlist-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('thank-you').classList.remove('hidden');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
